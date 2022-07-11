@@ -40,3 +40,13 @@ A unica coisa q pode avacalhar sao os outros membros do grupo,
 1. Baixar as mensagens do telegram.
 2. Botar o arquivo html no diretorio
 3. Rodar o arquivo `parseHtml.py` com o nome do arquivo html.
+
+## Links interessantes:
+
+- https://github.com/pedroargento/meal-prep-help
+
+### TODO:
+
+1. Salvar output para um arquivo txt (facilitar a leitura de outros). Cada linha é uma registro do bid
+2. Fazer o parse desse arquivo txt para contabilizar os bids dos participantes.
+3. Estipular as regras do jogo
