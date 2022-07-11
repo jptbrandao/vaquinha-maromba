@@ -34,3 +34,9 @@ O que conta como exercicio?
 
 No mais, confiamos no amiguinho para nao zuar a brincadeira, seja pra avacalhar, ou pra mentir
 A unica coisa q pode avacalhar sao os outros membros do grupo,
+
+## Instruções para rodar o parser:
+
+1. Baixar as mensagens do telegram.
+2. Botar o arquivo html no diretorio
+3. Rodar o arquivo `parseHtml.py` com o nome do arquivo html.
