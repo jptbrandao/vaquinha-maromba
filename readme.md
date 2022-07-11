@@ -33,4 +33,4 @@ O que conta como exercicio?
 - Algo que te faça suar por uns 45 mins de exercicio
 
 No mais, confiamos no amiguinho para nao zuar a brincadeira, seja pra avacalhar, ou pra mentir
-A unica coisa q pode avacalhar sao os outros membros do grupo, bullying saudavel é sempre bem vindo
+A unica coisa q pode avacalhar sao os outros membros do grupo,
