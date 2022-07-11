@@ -2,7 +2,7 @@
 
 ## Datas
 
-Inicio: 11/06/2022
+Inicio: 11/07/2022
 Fim: 31/12/2022
 
 ## Entradas
