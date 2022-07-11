@@ -1,15 +1,15 @@
-## Versao v1:
+# Versao v1:
 
-# Datas
+## Datas
 
 Inicio: 11/06/2022
 Fim: 31/12/2022
 
-# Entradas
+## Entradas
 
 Para entrar: 100 reais
 
-# Premios dos ganhadores
+## Premios dos ganhadores
 
 Top 3 Ganham premio. 4o ganha trofeu joinha
 
@@ -17,14 +17,14 @@ Top 3 Ganham premio. 4o ganha trofeu joinha
 - 2o -> 30% pot
 - 3o -> 10% pot
 
-# Regras de contabilidade
+## Regras de contabilidade
 
 1. Só conta 1 vez por dia. Se vc for mais vezes no mesmo dia, só vai contar 1 vez
 2. Max 5x semana. Semana inicia SEMPRE na 2a.
 3. TEM que postar foto no grupo de vc malhando, com a hashtag #maromba23
 4. TEM q contabilizar o proprio dia
 
-# F.A.Q.
+## F.A.Q.
 
 O que conta como exercicio?
 
