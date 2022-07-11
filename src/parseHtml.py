@@ -1,15 +1,16 @@
 from bs4 import BeautifulSoup
 import re
+import csv
 
 # Player has structure:
 # - name: string
-# - timestap: date (string)
+# - date: string
 # - messageId: string
 
-def getTimeStamp(div):
+def getDate(div):
     divTimestamp = div.find('div', class_='pull_right date details')
-    timestamp = re.search("title=\".*\"", str(divTimestamp)).group().split('"')[1]
-    return timestamp
+    date = re.search("title=\".*\"", str(divTimestamp)).group().split('"')[1][:10]
+    return date
 
 def getPlayerName(msgId, soup):
     for i in range(0, 20):
@@ -22,9 +23,9 @@ def getPlayerName(msgId, soup):
 
 def extractPlayerFromBlockMessage(msgId, soup):
     msgBlock = soup.find('div', id=msgId)
-    timestamp = getTimeStamp(msgBlock)
+    date = getDate(msgBlock)
     playerName = getPlayerName(msgId, soup)
-    player = { "name": playerName, "date": timestamp, "messageId": msgId }
+    player = { "name": playerName, "date": date, "messageId": msgId }
     return player
 
 
@@ -49,10 +50,23 @@ def getValidPlayersBidFromFile(filename):
     for msgId in confirmedList:
         player = extractPlayerFromBlockMessage(msgId, soup)
         playerList.append(player)
-    print(playerList)
+    return playerList
 
+
+def outputData(filepath, fields, rows):
+    with open(filepath, "w") as output:
+        csvwriter = csv.writer(output)
+        csvwriter.writerow(fields)
+        csvwriter.writerows(rows)
 
 
 filename = "messages.html"
-getValidPlayersBidFromFile(filename)
+fields = ['date', 'name', 'messageId']
+playerList = getValidPlayersBidFromFile(filename)
+print(playerList)
 
+playerRows = list(map(lambda x: [x['date'], x['name'], x['messageId']], playerList))
+print(fields)
+print(playerRows)
+
+outputData("output.txt", fields, playerRows)
