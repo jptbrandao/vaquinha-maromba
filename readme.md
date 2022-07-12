@@ -39,7 +39,8 @@ A unica coisa q pode avacalhar sao os outros membros do grupo,
 
 1. Baixar as mensagens do telegram.
 2. Botar o arquivo html no diretorio
-3. Rodar o arquivo `parseHtml.py` com o nome do arquivo html.
+3. Rodar da forma: `python parseHtmlFile.py <<Nome-Arquivo-Html>> <<Nome-Arquivo-Output>>`
+   Ex: `python parseHtmlFile.py msg-22-07-11.html output.txt`
 
 ## Links interessantes:
 
@@ -47,6 +48,6 @@ A unica coisa q pode avacalhar sao os outros membros do grupo,
 
 ### TODO:
 
-1. Salvar output para um arquivo txt (facilitar a leitura de outros). Cada linha é uma registro do bid
+1. Done - Salvar output para um arquivo txt (facilitar a leitura de outros). Cada linha é uma registro do bid
 2. Fazer o parse desse arquivo txt para contabilizar os bids dos participantes.
 3. Estipular as regras do jogo
