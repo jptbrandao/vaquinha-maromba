@@ -1,3 +1,4 @@
+import sys
 import csv
 import datetime
 
@@ -47,7 +48,10 @@ def countPlayersBidsInFile(filename):
     playersTotalBids = applyGameRules(bidWeek)
     return playersTotalBids
 
-filename = 'bid-22-07-11.csv'
-playersTotalBids = countPlayersBidsInFile(filename)
-print()
-print(playersTotalBids)
+
+if __name__ == "__main__":
+    inputFilename = sys.argv[1]
+    print(inputFilename)
+    playersTotalBids = countPlayersBidsInFile(inputFilename)
+    print()
+    print(playersTotalBids)
