@@ -34,18 +34,20 @@ def applyGameRules(bidWeek):
             playersTotalBid[player] = min(playersTotalBid[player], 5)
     return playersTotalBid
 
+def countPlayersBidsInFile(filename):
+    # Initialize week
+    bidWeek = [[] for i in range(7)]
+
+    with open(filename, 'r') as file:
+        csvFile = csv.reader(file)
+        header = next(csvFile)
+        for row in csvFile:
+            bidWeek = registerPlayerBidsPerWeekDay(row, bidWeek)
+
+    playersTotalBids = applyGameRules(bidWeek)
+    return playersTotalBids
 
 filename = 'bid-22-07-11.csv'
-# Initialize week
-bidWeek = [[] for i in range(7)]
-
-with open(filename, 'r') as file:
-    csvFile = csv.reader(file)
-    header = next(csvFile)
-    for row in csvFile:
-        bidWeek = registerPlayerBidsPerWeekDay(row, bidWeek)
-
-playersTotalBid = applyGameRules(bidWeek)
-
+playersTotalBids = countPlayersBidsInFile(filename)
 print()
-print(playersTotalBid)
+print(playersTotalBids)
