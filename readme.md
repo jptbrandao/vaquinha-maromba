@@ -39,8 +39,20 @@ A unica coisa q pode avacalhar sao os outros membros do grupo,
 
 1. Baixar as mensagens do telegram.
 2. Botar o arquivo html no diretorio
-3. Rodar da forma: `python parseHtmlFile.py <<Nome-Arquivo-Html>> <<Nome-Arquivo-Output>>`
-   Ex: `python parseHtmlFile.py msg-22-07-11.html output.txt`
+3. Rodar da forma:
+
+```
+python parseHtmlFile.py arquivoInput.html arquivoOutput.csv
+python countBids.py arquivoOutput.csv
+
+```
+
+Exemplo:
+
+```
+python parseHtmlFile.py msg-22-07-11.html output.txt`
+pythonr countBids.py output.txt
+```
 
 ## Links interessantes:
 
