@@ -31,7 +31,7 @@ def extractPlayerFromBlockMessage(msgId, soup):
 
 
 def confirmMessageBlock(msgBlock, hashtag):
-    regexMatch = re.search(hashtag, str(msgBlock))
+    regexMatch = re.search(hashtag, str(msgBlock).lower())
     if regexMatch == None:
         return False
     return msgBlock.find('img') != None
