@@ -1,4 +1,3 @@
-import sys
 from bs4 import BeautifulSoup
 import re
 import csv
@@ -61,22 +60,9 @@ def outputData(filepath, fields, rows):
         csvwriter.writerows(rows)
 
 
-def parse(inputFilename, outputFilename):
+def parseHtml(inputFilename, outputFilename):
     fields = ['date', 'name', 'messageId']
     playerList = getValidPlayersBidFromFile(inputFilename)
-    print(playerList)
-
     playerRows = list(map(lambda x: [x['date'], x['name'], x['messageId']], playerList))
-    print(fields)
-    print(playerRows)
-
     outputData(outputFilename, fields, playerRows)
 
-if __name__ == "__main__":
-    inputFilename = sys.argv[1]
-    outputFilename = sys.argv[2]
-    if outputFilename == None:
-        outputFilename = "output.txt"
-    print(inputFilename)
-    print(outputFilename)
-    parse(inputFilename, outputFilename)
