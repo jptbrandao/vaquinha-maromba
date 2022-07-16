@@ -38,20 +38,14 @@ A unica coisa q pode avacalhar sao os outros membros do grupo,
 ## Instruções para rodar o parser:
 
 1. Baixar as mensagens do telegram.
-2. Botar o arquivo html no diretorio
-3. Rodar da forma:
+2. Criar uma pasta `/data/chats-html`
+3. Botar os arquivos html na pasta criada
+4. Criar uma pasta `/data/chat-bids`
+5. Rodar da forma:
 
 ```
-python parseHtmlFile.py arquivoInput.html arquivoOutput.csv
-python countBids.py arquivoOutput.csv
+python main.py
 
-```
-
-Exemplo:
-
-```
-python parseHtmlFile.py msg-22-07-11.html output.txt`
-pythonr countBids.py output.txt
 ```
 
 ## Links interessantes:
