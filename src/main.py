@@ -1,6 +1,7 @@
 import os
 import re
 from parseHtmlFile import parseHtml
+from countBids import countBids
 
 def getFilenames(path):
     path = "../data/chats-html"
@@ -24,7 +25,20 @@ if __name__ == "__main__":
 
     for ioFiles in ioFilePaths:
         print()
-        print('Reading from:', ioFiles[0])
-        print('Writing to:', ioFiles[1])
+        print('Extracting bids from:', ioFiles[0])
+        print('Writing them to:', ioFiles[1])
         parseHtml(ioFiles[0], ioFiles[1])
+
+    print('Bids extracted from html files')
+    print('Aggregating bids')
+    print()
+    print()
+    print('=========================')
+    print()
+    outputPaths = list(map(lambda x: x[1], ioFilePaths))
+    countBids(outputPaths)
+    print()
+    print('=========================')
+    print()
+    print()
     print('done')
