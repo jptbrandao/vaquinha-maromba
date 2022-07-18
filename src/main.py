@@ -24,6 +24,8 @@ if __name__ == "__main__":
     ioFilePaths = getIOFilePaths(inputDir, outputDir)
 
     for ioFiles in ioFilePaths:
+        if re.match(".*\.DS_Store", ioFiles[0]):
+            continue
         print()
         print('Extracting bids from:', ioFiles[0])
         print('Writing them to:', ioFiles[1])
