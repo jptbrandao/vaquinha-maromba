@@ -57,7 +57,7 @@ def getDayOfWeek(date):
     return weekday
 
 def mapPlayers(playername):
-    mapPlayers = {'Fernanda': 'Fernanda', 'Coutinho': 'Couto', 'Filipo Negrao':'Filipo', 'Haroldo Olivieri':'Haroldo', 'João Pedro Brandão': 'Brandao', 'Argento': 'Argento', 'Dalma Cerro':'Dalma', 'Pedro Argento': 'Pedro', 'Garcia Joao': 'Garcia'}
+    mapPlayers = {'Fernanda': 'Fernanda', 'Coutinho': 'Couto', 'Filipo Negrao':'Filipo', 'Haroldo Olivieri':'Haroldo', 'João Pedro Brandão': 'Brandao', 'Argento': 'Argento', 'Dalma Cerro':'Dalma', 'Pedro Argento': 'Pedro', 'Garcia Joao': 'Garcia', 'Renan Almeida': 'Renem'}
     return mapPlayers[playername]
 
 def countBidsFromFile(filename, playersDict):
