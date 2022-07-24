@@ -1,7 +1,7 @@
 import os
 import re
 from parseHtmlFile import parseHtml
-from countBids import countBids
+from countBids import loadBids
 
 def getFilenames(path):
     path = "../data/chats-html"
@@ -38,7 +38,7 @@ if __name__ == "__main__":
     print('=========================')
     print()
     outputPaths = list(map(lambda x: x[1], ioFilePaths))
-    countBids(outputPaths)
+    loadBids(outputPaths)
     print()
     print('=========================')
     print()
