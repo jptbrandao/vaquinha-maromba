@@ -116,5 +116,6 @@ def outputBids(playersDict):
         playerOutput = formatPlayerOutput(playersDict, name, weeks)
         data.append(playerOutput)
     df = pd.DataFrame(data, columns = columnNames)
+    df = df.sort_values(by='total', ascending=0)
     print(df)
     return
