@@ -69,6 +69,8 @@ class Player:
 
 
 def mapPlayers(playername):
+    if 'Wifi' in playername:
+        playername = 'Dalma Cerro'
     playerNameMap = {'Fernanda': 'Fernanda', 'Coutinho': 'Couto', 'Filipo Negrao':'Filipo', 'Haroldo Olivieri':'Haroldo', 'João Pedro Brandão': 'Brandao', 'Argento': 'Argento', 'Dalma Cerro':'Dalma', 'Pedro Argento': 'Pedro', 'Garcia Joao': 'Garcia', 'Renan Almeida': 'Renem'}
     return playerNameMap[playername]
 
@@ -104,11 +106,23 @@ def formatPlayerOutput(playersDict, name, weeks):
     playerOutput.extend(weeklyBids)
     return playerOutput
 
+def orderWeekDates(dates):
+    timestamps = []
+    for date in dates:
+        dateTimeStamp = datetime.datetime.strptime(date, "%d.%m.%Y")
+        timestamps.append(dateTimeStamp)
+    timestamps.sort(reverse=True)
+    sortedDates = []
+    for dateTimeStamp in timestamps:
+        date = dateTimeStamp.strftime("%d.%m.%Y")
+        sortedDates.append(date)
+    return sortedDates
+
 def outputBids(playersDict):
     names = list(playersDict.keys())
     names.sort()
     weeks = gameWeeks(playersDict)
-    weeks.sort(reverse=True)
+    weeks = orderWeekDates(weeks)
     columnNames = ['name', 'total']
     columnNames.extend(weeks)
     data = []
